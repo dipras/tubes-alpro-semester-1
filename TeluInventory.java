@@ -15,7 +15,7 @@ public class TeluInventory {
     }
 
     public static void main(String[] args) {
-        // inisia`
+        // constructor untuk melakukan inisialisasi applikasi dengan default user. Menggunakan konsep new object agar penggunaan attr dan method tidak static
         TeluInventory App = new TeluInventory();
 
         System.out.println("WELCOME TO TELKOM INVENTORY");
@@ -126,8 +126,8 @@ public class TeluInventory {
         int index = 0;
         boolean found = false;   
         for(Good good: this.goods) {
-            index++;
             if(good.user_id == userId && !good.taken) {
+                index++;
                 System.out.println(index + " | " + good.name + " | " + good.created_at);
                 found = true;
             }
