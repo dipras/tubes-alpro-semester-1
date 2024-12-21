@@ -122,21 +122,21 @@ public class TeluLibrary {
 
     public void listGoods(int userId) {
         System.out.println("\nYour belongings: ");
-        int index = 1;
+        int index = 0;
         boolean found = false;   
         for(Good good: this.goods) {
+            index++;
             if(good.user_id == userId && !good.taken) {
                 System.out.println(index + " | " + good.name + " | " + good.created_at);
                 found = true;
             }
         }
-        if(!found) {
+        if(index <= 0) {
             System.out.println("You don't have any belongings yet!");
         }
     }
 
     public void showHistory(int userId) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("\n=================== HISTORY ===================");
         boolean found = false;
         for (History history : this.histories) {
