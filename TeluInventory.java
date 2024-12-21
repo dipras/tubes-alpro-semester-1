@@ -3,19 +3,20 @@ import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TeluLibrary {
+public class TeluInventory {
     public ArrayList<User> users = new ArrayList<User>();
     public ArrayList<Good> goods = new ArrayList<Good>();
     public ArrayList<History> histories = new ArrayList<History>();  // Riwayat pengambilan
     public Scanner input = new Scanner(System.in);
     public SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public TeluLibrary() {
+    public TeluInventory() {
         this.users.add(new User(1, "Default user", "user", "password"));
     }
 
     public static void main(String[] args) {
-        TeluLibrary App = new TeluLibrary();
+        // inisia`
+        TeluInventory App = new TeluInventory();
 
         System.out.println("WELCOME TO TELKOM INVENTORY");
         System.out.println("In here you can entrust your belongings to us!");
